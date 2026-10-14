@@ -1,0 +1,43 @@
+{
+  "generated": "2026-09-27T00:00:00.000Z",
+  "chain": "Framework -> LAOS -> task identity -> gates -> agent -> skills -> MCP/tools -> local model (role) -> GPU controller -> execution -> verification -> evidence -> Gate Network -> learning",
+  "hardware": "RTX 3090 24GB / 80GB RAM / i9-14900KF 24c/32t; traffic design = ONE resident model at a time (store E:\\MeterPulse_AI\\ollama-models)",
+  "model_set": ["qwen3-coder:30b", "deepseek-r1:32b", "qwen2.5vl:32b", "qwen2.5vl:7b"],
+  "capability_to_model": {
+    "task_forging": "deepseek-r1:32b",
+    "architecture": "deepseek-r1:32b",
+    "planning": "deepseek-r1:32b",
+    "complex_coding": "qwen3-coder:30b",
+    "normal_coding": "qwen3-coder:30b",
+    "implementation": "qwen3-coder:30b",
+    "exploration": "qwen3-coder:30b",
+    "testing": "qwen3-coder:30b",
+    "unit_test": "qwen3-coder:30b",
+    "simulation_test": "qwen3-coder:30b",
+    "physical_test": "qwen3-coder:30b",
+    "e2e_browser_test": "qwen3-coder:30b",
+    "debugging": "deepseek-r1:32b",
+    "security": "deepseek-r1:32b",
+    "security_test": "deepseek-r1:32b",
+    "documentation": "qwen3-coder:30b",
+    "vision": "qwen2.5vl:32b",
+    "visual_ui_audit": "qwen2.5vl:32b",
+    "vision_fast": "qwen2.5vl:7b",
+    "framework_routing": "framework/meter-pulse-framework"
+  },
+  "stage_to_role": {
+    "R0-recon": "ROLE_CODING (qwen3-coder:30b)",
+    "R1-plan": "ROLE_PLANNING (deepseek-r1:32b)",
+    "R2-impl": "ROLE_CODING (qwen3-coder:30b)",
+    "R2-test": "ROLE_TEST (qwen3-coder:30b)",
+    "R2-vision": "ROLE_VISION (qwen2.5vl:32b)",
+    "R3-verify": "ROLE_SECURITY (deepseek-r1:32b)"
+  },
+  "swap_cost": "0 for coding<->test<->docs (same model); 1 load for coding->planning->vision",
+  "providers_allowed": [
+    "ollama (http://localhost:11434/v1)",
+    "framework (http://localhost:3199/v1)"
+  ],
+  "cloud": "cloud brain via opencode primary (big context: design/plan/audit/review/learning/delegation); execution stays LOCAL. Cloud receives paths+summaries only, never bulk content.",
+  "token_policy": "LOCAL does all heavy work; cloud receives artifact paths + short summaries. Modes: PLAN (cloud), LEADER (cloud + small local), ALL-AGENTS (local-heavy)."
+}

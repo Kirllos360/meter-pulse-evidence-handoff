@@ -1,0 +1,70 @@
+{
+  "generated": "2026-09-27T00:00:00.000Z",
+  "principle": "CLOUD = think (design/plan/audit/review/learn). LOCAL GPU = do (worker/arm/coder/implementer/vision/organizer/test-L1/db/sim). Goal: minimize cloud tokens.",
+  "why_group_orchestrators_cannot_fan_out": "Subagents have NO task tool (they are mode:subagent; only IT Leader / mode:primary|all agents have it). FAN-OUT MUST COME FROM THE PRIMARY AGENT.",
+  "fanout_owner": "primary (IT Leader / cloud LLM) - the only agent with the task tool",
+  "model_set": {
+    "decision": "MINIMUM VIABLE - 6 roles covered by REUSE with 4 models",
+    "models": ["qwen3-coder:30b", "deepseek-r1:32b", "qwen2.5vl:32b", "qwen2.5vl:7b"],
+    "retired": ["qwen2.5-coder:7b", "qwen2.5-coder:14b", "qwen2.5-coder:32b", "qwen3:32b", "gemma3:27b", "llava:13b", "moondream"]
+  },
+  "layers": {
+    "CLOUD_LLM": {
+      "provider": "opencode primary (cloud)",
+      "role": "reasoning only",
+      "duties": ["design", "planning", "architecture", "spec-writing", "audit synthesis", "review verdicts", "learning/governance", "delegation (task tool)"],
+      "token_policy": "minimal - receive artifact paths + summaries, never bulk content",
+      "agents": ["it-leader(primary)", "plan-mode", "leader-mode", "architecture", "architect", "analyst", "critic", "review", "incident-responder"]
+    },
+    "LOCAL_GPU": {
+      "provider": "ollama :11434 (RTX 3090 24GB)",
+      "role": "execution at scale",
+      "duties": ["worker", "arm", "coder/implementer", "vision (qwen2.5vl)", "organizer", "first-layer tests", "simulation/physical tests", "database work", "bulk scanning", "file/DB read-write", "screenshots", "evidence"],
+      "token_policy": "unlimited local - this is where tokens are SAVED",
+      "model_store": "E:\\MeterPulse_AI\\ollama-models",
+      "traffic_design": "ONE model resident at a time (OLLAMA_KEEP_ALIVE=5m, OLLAMA_MAX_LOADED_MODELS=1, OLLAMA_NUM_PARALLEL=1); full 24GB VRAM transfers to the active role.",
+      "models": {
+        "ROLE_CODING": "qwen3-coder:30b",
+        "ROLE_TEST": "qwen3-coder:30b",
+        "ROLE_PLANNING": "deepseek-r1:32b",
+        "ROLE_SECURITY": "deepseek-r1:32b",
+        "ROLE_VISION": "qwen2.5vl:32b",
+        "ROLE_VISION_FAST": "qwen2.5vl:7b",
+        "ROLE_DOCS": "qwen3-coder:30b"
+      },
+      "agents": ["explore", "coding", "backend", "frontend", "database", "postgres", "prisma", "redis", "test", "debug", "build", "browser", "ui-audit", "designer", "visual-qa", "regression", "verification"],
+      "arms": ["R0-recon", "R1-context/plan", "R2-impl/run/test", "R3-verify"]
+    }
+  },
+  "task_type_to_route": {
+    "design|architecture|spec": "CLOUD_LLM -> @architecture/@architect -> artifacts; LOCAL executes",
+    "planning|roadmap|decomposition": "CLOUD_LLM (or LOCAL deepseek-r1:32b)",
+    "audit|review|verdict": "LOCAL gathers evidence -> CLOUD_LLM synthesizes verdict",
+    "learning|governance|lessons": "CLOUD_LLM only",
+    "bulk-scan|index|extract|read-files": "LOCAL_GPU (explore/qwen3-coder:30b)",
+    "implement|coder|edit": "LOCAL_GPU (coding/qwen3-coder:30b) via local-tool-bridge",
+    "vision|screenshot|ui-audit": "LOCAL_GPU (qwen2.5vl:32b; fast qwen2.5vl:7b)",
+    "tests (L1)|unit|smoke|sim|physical": "LOCAL_GPU (test/qwen3-coder:30b)",
+    "database|schema|query|migration": "LOCAL_GPU (database/qwen3-coder:30b)",
+    "security audit": "LOCAL_GPU (security/deepseek-r1:32b)",
+    "docs|readme|changelog": "LOCAL_GPU (documentation/qwen3-coder:30b)",
+    "regression|full-suite": "LOCAL_GPU (regression) -> CLOUD verdict"
+  },
+  "fanout_protocol": [
+    "1. Primary receives 'all-agents' trigger (or a task).",
+    "2. Primary classifies each workstream: THINK (cloud) vs DO (local).",
+    "3. Primary calls task(subagent_type=<specialist>) directly - one call per workstream.",
+    "4. LOCAL agents act through .ai/control/local-tool-bridge.mjs.",
+    "5. LOCAL agents write artifacts to disk; they return ONLY paths + status.",
+    "6. Primary (cloud) reads artifact paths, synthesizes design/plan/verdict/lesson.",
+    "7. Learning recorded; governance unchanged by learning without approval."
+  ],
+  "hard_rules": [
+    "FAN-OUT OWNER = PRIMARY.",
+    "Cloud receives PATHS + SUMMARIES, never bulk file contents.",
+    "Local does ALL high-volume work.",
+    "Local models use the bridge for tools; never assume native tool calls.",
+    "TRAFFIC DESIGN: one resident model at a time; the active role gets the whole GPU.",
+    "Batch by role to avoid model swaps."
+  ]
+}

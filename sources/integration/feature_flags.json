@@ -1,0 +1,13 @@
+{
+  "default_state": "DISABLED",
+  "generated": "2026-10-14T01:53:31+03:00",
+  "phase": "5",
+  "note": "All integration surfaces are inert until explicitly enabled after later-phase tests pass. Meter Pulse Framework remains the sole control plane. Do not flip these without approval.",
+  "flags": {
+    "routing_adapter": false,
+    "litellm_alias_gateway": false,
+    "dspy_structured_bridge": false,
+    "promptwizard_optimizer": false,
+    "opencode_go_gateway": false
+  }
+}

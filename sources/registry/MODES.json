@@ -1,0 +1,82 @@
+{
+  "modes": {
+    "ALL_AGENT": {
+      "name": "ALL_AGENT",
+      "description": "Framework-managed shared-resource execution mode",
+      "type": "local",
+      "capabilities": [
+        "implementation", "coding", "debugging", "ui", "backend",
+        "database", "browser", "vision", "mcp", "tools", "skills",
+        "local_arms", "local_llms"
+      ],
+      "routing": {
+        "default": "LOCAL",
+        "escalation": "API after 3 failed attempts"
+      },
+      "governance": "Framework-managed",
+      "evidence_required": true
+    },
+    "LEADER": {
+      "name": "LEADER",
+      "description": "Framework-managed shared-resource coordination/audit mode",
+      "type": "local",
+      "capabilities": [
+        "testing", "audit", "evidence", "documentation", "vision",
+        "light_planning", "design", "coordination", "mcp", "tools",
+        "skills", "arms", "llms"
+      ],
+      "routing": {
+        "default": "LOCAL",
+        "escalation": "API for complex planning"
+      },
+      "governance": "Framework-managed",
+      "evidence_required": true
+    },
+    "PLAN": {
+      "name": "PLAN",
+      "description": "API-native mode for complex planning",
+      "type": "api",
+      "capabilities": [
+        "complex_planning", "architecture_planning", "dependency_analysis",
+        "roadmap_decomposition", "task_decomposition"
+      ],
+      "routing": {
+        "default": "API",
+        "fallback": "LOCAL with explicit escalation"
+      },
+      "governance": "Framework-managed",
+      "evidence_required": true
+    },
+    "BUILD": {
+      "name": "BUILD",
+      "description": "API-native mode for complex design/build reasoning",
+      "type": "api",
+      "capabilities": [
+        "complex_design", "build_reasoning", "architecture_implementation",
+        "high_intelligence_design"
+      ],
+      "routing": {
+        "default": "API",
+        "fallback": "LOCAL with explicit escalation"
+      },
+      "governance": "Framework-managed",
+      "evidence_required": true
+    }
+  },
+  "routing_rules": {
+    "implementation": "ALL_AGENT",
+    "coding": "ALL_AGENT",
+    "debugging": "ALL_AGENT",
+    "testing": "LEADER",
+    "audit": "LEADER",
+    "documentation": "LEADER",
+    "planning": "PLAN",
+    "architecture": "PLAN",
+    "design": "BUILD",
+    "complex_debugging": "ALL_AGENT"
+  },
+  "escalation": {
+    "max_local_attempts": 3,
+    "after_max_attempts": "API"
+  }
+}

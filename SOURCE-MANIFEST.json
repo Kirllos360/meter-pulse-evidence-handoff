@@ -1,0 +1,303 @@
+{
+  "generated": "2026-10-14T15:03:38.093Z",
+  "secret_scan": "0 files with secret patterns (see _secret-scan.txt)",
+  "entries": [
+    {
+      "packaged_path": "CHAT-HANDOFF.md",
+      "sha256": "6bac5bfb276c51c004817c0bb4d6eb4e004f67129defe49f9e14f437ec70dee9",
+      "bytes": 8375,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "CURRENT-STATE.md",
+      "sha256": "c9651292b9c3ee28d2db53ad59dccfbe88ce9e04d4019d770cca02593ed30df0",
+      "bytes": 2093,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "PHASE-SUMMARY.md",
+      "sha256": "605ddcffa3c0dfcecc06a89899b985181354818438c536a961121e207379608c",
+      "bytes": 3659,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "README.md",
+      "sha256": "565f2f196f4e29b7287bf19bc5dfb27ad887813544bddf1b1445bf693c3d895a",
+      "bytes": 2131,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "reports\\PHASE0-REUSE-AUDIT.md",
+      "sha256": "cda2da12f86469404bf0ee177eef1e2235706dc2feabb677f8eb270ddd509dd6",
+      "bytes": 12555,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "reports\\PHASE0.1-UI-SUITABILITY-AUDIT.md",
+      "sha256": "b0b3f8e638bbcde173706c971f7359616466f94db39d82c253ec49ae3ef0d7f5",
+      "bytes": 7362,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "reports\\PHASE1-MINIMAL-EXECUTION-DESIGN.md",
+      "sha256": "b684d17cf0e0c36b4690498473894abb0613f90ba45ebe4014139d96685e26d8",
+      "bytes": 11409,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "reports\\PHASE13A-DESIGN-ROUTING-AUDIT.md",
+      "sha256": "b7feb8a9145051d2cf043fc9c676de9d6c7c9b23e0ca68eef3f9e8f58f110934",
+      "bytes": 12364,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "reports\\PHASE13B-CANONICAL-CONTRACT-PROPOSAL.md",
+      "sha256": "3496c3c7484efe71e11f5e2618798ed064ff9643ccdc900bd54f4756404cc637",
+      "bytes": 13850,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "reports\\PHASE13C-IMPLEMENTATION-REPORT.md",
+      "sha256": "345d42f82875d18e1e4da736591bdbf15b741cd775dc19b9aa155f449498e1ab",
+      "bytes": 4416,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "reports\\PHASE13D-CONFORMANCE-REPORT.md",
+      "sha256": "8212802554810265d98fa9da028bb8f4782a588b1ad14519548c6db48f8d43be",
+      "bytes": 5148,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "reports\\PHASE13E-INTEGRATION-PILOT-REPORT.md",
+      "sha256": "aeb60a43627f3897653109da40f8e13fc3cb94647e083d4eb80557be4c9c1c3f",
+      "bytes": 5231,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "reports\\PHASE13F-ACCEPTANCE-REPORT.md",
+      "sha256": "52fcbf7e9974a4204f8c11018df9f7494f608519e3c69f3f7467eaca5a65aa63",
+      "bytes": 7122,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "reports\\PHASE2-EVIDENCE-RECONCILIATION-AND-APPROVAL-PACKAGE.md",
+      "sha256": "4decb89815b7f732953da3cd6efdd036fc4f9441af880173c7cb359e28ed7ca3",
+      "bytes": 13331,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\integration\\context_budget.mjs",
+      "sha256": "4b5de6318be01299df08c5273bc650c9ac451444103fcfe4c44f0b7b3b029fcb",
+      "bytes": 1284,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\integration\\contract.test.mjs",
+      "sha256": "4b19a51caafa58ce3d516bb918a145d9620fec80f8b801250bc6b0251648e8a7",
+      "bytes": 5293,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\integration\\feature_flags.json",
+      "sha256": "9bd8cbc5e7872edfb22eaa32c50223b2beb94a08e49e57db136f856eac2ff484",
+      "bytes": 478,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\integration\\prompt_contract.mjs",
+      "sha256": "0acda6807874a8547f9234824cc81237492b6ce420faea3f8e9bff5d53e8a3b7",
+      "bytes": 1147,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\integration\\retry_policy.mjs",
+      "sha256": "aff5ce221b7a82196b6b19b9a3b19ef6f83046009f0cb82580c9dd6d2293ef64",
+      "bytes": 1185,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\integration\\route_selector.mjs",
+      "sha256": "f7ba0e91ac01a84fe5ba1e58ec1f8a18235d9a81fac7e99ac52e0042980e22f4",
+      "bytes": 1870,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\local-tool-bridge.mjs",
+      "sha256": "5e057a807a6d6e4f12513e6d90f97c265111dacb733f5e4bfe4ce5e9a62eb4c4",
+      "bytes": 5753,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\registry\\CAPABILITY_ROUTING.json",
+      "sha256": "868b9d56b6382b9cbb0d5b680955b36cdf3cc8c867a24c469aefef51fe111f7e",
+      "bytes": 2190,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\registry\\CLOUD_LOCAL_ROUTING.json",
+      "sha256": "193aa07331b52e21484d2d24197d35dc45dde10fd53366d90b89f7b3acd3d0c9",
+      "bytes": 4501,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\registry\\MODES.json",
+      "sha256": "22be026ba731909790bf747f61b2f14504def41a765b05159c3373bab38afe03",
+      "bytes": 2408,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\registry\\TASK_PROFILES.json",
+      "sha256": "eb5b4ee8b7ecaa346efa3a40a6abe3dd76b070abba094582b298e4a0adedde0d",
+      "bytes": 8039,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\scripts\\context-bridge.mjs",
+      "sha256": "923a595c5c236dbc68006e2cac1dd75257f53264715ccca3f9163a9351f2973e",
+      "bytes": 11316,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\scripts\\context.mjs",
+      "sha256": "b31a8ede604c81dbb51e475ab52b88b169ab43df68d2c7e06e82d44a2402f36f",
+      "bytes": 5709,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\scripts\\enforce.mjs",
+      "sha256": "6a0da122283d108eecdb38aaa9b4188a47f7ce39fbf563eef396731347cf5bb3",
+      "bytes": 17100,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\scripts\\framework-gateway.mjs",
+      "sha256": "66dfc5aaf94fa9a87cf54ef7afc5a17f7b72c9f61103a87f11fca8ae6cc67a36",
+      "bytes": 14596,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\scripts\\gates.mjs",
+      "sha256": "09185404429be83f08bec98ed88ec6e4d2ef405f78c3622d76571ca0a4ee1234",
+      "bytes": 14178,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\scripts\\mission.mjs",
+      "sha256": "50145fccb75e832a3f1e4963e1854c47af42c4dbdd2ab0b2552b3fa74006032b",
+      "bytes": 11079,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "sources\\scripts\\orders.mjs",
+      "sha256": "3a24b11af49054aeb237e8d9cf6f36e40c93b431dc94d7180b02b7bbf056f617",
+      "bytes": 10980,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    },
+    {
+      "packaged_path": "STAGE-0-REVIEW-PACKET.md",
+      "sha256": "26ac2cea67258b384879a62aefbbc2e9a6c9347ecf680abb0a8a34c33b672bbc",
+      "bytes": 4157,
+      "original_source": "(this package)",
+      "copied": true,
+      "classification": "PROPOSED/DERIVED",
+      "sensitivity": "non-sensitive"
+    }
+  ]
+}
